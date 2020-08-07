@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Avery Chiu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="#" class="image avatar"><img src="images/Avery.jpg" alt="" /></a>
+				<h1><strong>Avery Chiu</strong> <br>
+					Automotive R&D Intern at Geotab <br>
+					Mechatronics Engineering Student <br>
+					University of Waterloo
+					<h1>
+			</div>
+		</header>
+
+		<!-- Main -->
+			<div id="main">
+					
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>What is Midnight Sun?</h2>
+						</header>
+						<p> Midnight Sun is a student design team focused on creating a solar car for the American Solar Car Challenge. Each
+							season we make a new solar car. The video below describes what my team does.
+							</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Bi9nRQpSDeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p></p>
+						<a href="https://www.uwmidsun.com/" class="button">Midnight Sun Official Website</a>
+					</section>
+
+					<section id="two">
+						<header class="major">
+							<h2>My Work on Midnight Sun</h2>
+						</header>
+						<h3> Telemetry </h3>
+						<p>Below is a brief outline of how I have layed out everything for telemetry</p>
+						<img src="images/midnightsun/telemetryarch.png" />
+						<p> The Raspberry Pi runs a Python script that I wrote to pick up CAN messages from the vehicle and GPS alongside it. This
+							then writes this data to a CSV file, sends it to MongoDB Atlas, the driver display flutter app, and FRED
+							(Front End for Node Red). The data is sent to FRED using MQTT, which picks up the CAN messages
+							and stores them in InfluxDB for 2 days. Below I have an example of the format of the data which has already
+							been decoded from the CAN bus.
+						</p>
+						<img src="images/midnightsun/samplecandata.png" />
+						<h3> Battery Management System (BMS) </h3>
+						<p>Below is an LTC6811 which is used to monitor our batteries. In our vehicle, we have to make sure 
+							the sun is able to charge up our batteries properly and that these batteries do not overheat.
+						Part of the code I wrote for our AFEs (Analog Front End), uses SPI to retrieve the temperatue of 32 thermistors connected to a 
+					mux in the BMS. </p>
+						<img src="images/midnightsun/LTC6811.jpg" />
+						<p>Below is the mux I interfaced to. Basically, we have controllers boards that talks to the LTC6811 with SPI, which then
+							talks to the mux with SPI as well. However, all the code I wrote directly controls everything from the controller boards.
+						</p>
+						<img src="images/midnightsun/ADG731.jpg" />
+					</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/AveryChiu/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/AveryChiu64" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:a27chiu@uwaterloo.ca" onmouseover="this.href=this.href.replace('@@','.')" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; AveryChiu</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
