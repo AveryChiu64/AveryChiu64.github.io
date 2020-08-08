@@ -2035,8 +2035,19 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.midsun {
+			width: 50%;
+			height: 25%;
+		}
+		.midsun.large {
+			width: 75%;
+			height: 50%;
+		}
+		.midsun.small {
+			width: 25%;
+			height: 15%;
+		}
 /* Image */
-
 	.image {
 		border-radius: 0.35em;
 		border: 0;
