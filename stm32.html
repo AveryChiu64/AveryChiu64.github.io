@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Avery Chiu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="#" class="image avatar"><img src="images/Avery.jpg" alt="" /></a>
+				<h1><strong>Avery Chiu</strong> <br>
+					Automotive R&D Intern at Geotab <br>
+					Mechatronics Engineering Student <br>
+					University of Waterloo
+					<h1>
+			</div>
+		</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>STM32F103C8</h2>
+						</header>
+						<p> The STM32F103C8 is a well known STM32 (commonly known as the blue pill). It has an
+							ARM Cortex-M3 processor on it. Below I briefly explain how I wrote the drivers for this MCU.
+							</p>
+							<img src="images/thumbs/stm32.JPG" class="midsun"/>
+						<p></p>
+					</section>
+
+					<section id="two">
+						<header class="major">
+							<h2>Writing the Drivers</h2>
+						</header>
+						<h3>The STM32 Header File</h3>
+						<p> One of the first steps was figuring out which bus
+							each peripheral I was going to write for was located. Then it was a matter of defining the
+							address of their locations in the header file for easy access later on.
+						</p>
+						<img src="images/st/memory_map.png" class="midsun"/>
+						<p> Above are examples of peripherals and their addresses for the STM32F103C8. I made
+							sure that important periphearls such as AFIO,EXTI, and GPIO were included in the header file.
+						</p>
+						<h3> GPIO </h3>
+						<p>  The first, and probably the most trivial, driver to write was GPIO. Below I outlined the API
+							for this driver.  </p>
+						<img src="images/st/gpio_api.png" class="midsun large"/>
+						<p> To get the GPIO drivers to work, I simply had to enable the clock for a specific GPIO port,
+							configure the settings by writing to certain GPIO registers. I defined these registers in the
+							GPIO header file.
+						</p>
+						<img src="images/st/gpio_reg_def.png" class="midsun large"/>
+						<p> I then wrote to the port configuration register in the init function.</p>
+						<img src="images/st/gpio_init.png" class="midsun large"/>
+						<p> To output data, in my implementation for this API I wrote to the port output data register
+							to toggle the state of a GPIO pin.
+						</p>
+
+						<h3> Interrupts </h3>
+						<p> The steering stalk was the first project I was given when I entered the solar car team. It is in charge of controlling the
+							cruise control, lights, horn, and radio in the car. For all the digital input (eg horn), there is an interrupt attatched to the pin
+							on the board for each peripheral. When the driver presses a button on the steering stalk, they can toggle the state of the lights, horn
+							, or radio. My module then detects this, raises an interrupt, and sends a CAN message to the power distribution to provide power
+							to the proper location in the vehicle. For the analog input (specifically the control stalk), the module uses an ADC to read voltages from the
+							control stalk and sends CAN messages based off of the voltages.
+						</p>
+						<img src="images/midnightsun/control_stalk.jpg" class="midsun" />
+					</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/AveryChiu/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/AveryChiu64" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:a27chiu@uwaterloo.ca" onmouseover="this.href=this.href.replace('@@','.')" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; AveryChiu</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
