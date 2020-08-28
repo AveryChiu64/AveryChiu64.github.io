@@ -63,15 +63,20 @@
 							to toggle the state of a GPIO pin.
 						</p>
 
-						<h3> Interrupts </h3>
-						<p> The steering stalk was the first project I was given when I entered the solar car team. It is in charge of controlling the
-							cruise control, lights, horn, and radio in the car. For all the digital input (eg horn), there is an interrupt attatched to the pin
-							on the board for each peripheral. When the driver presses a button on the steering stalk, they can toggle the state of the lights, horn
-							, or radio. My module then detects this, raises an interrupt, and sends a CAN message to the power distribution to provide power
-							to the proper location in the vehicle. For the analog input (specifically the control stalk), the module uses an ADC to read voltages from the
-							control stalk and sends CAN messages based off of the voltages.
+						<h3> GPIO Interrupts </h3>
+						<p> For setting up GPIO interrupts, I had to set up the NVIC registers in the ARM Cortex M3 to properly
+							process interrupts from the EXTI lines of the STM32. This is based off of their IRQ numbers which I defined
+							in the header file.	</p>
+							<img src="images/st/nvic_register.png" class="large" />
+						<p>I also added to the original gpio_init function
+							so that it would configure the registers for the EXTI lines and their settings, specifically which
+							edge to trigger the interrupt. I also had to ensure that the EXTI line for the specific pin would be
+							unmasked so the interrupt can be processed and sent to the NVIC.
 						</p>
-						<img src="images/midnightsun/control_stalk.jpg" class="midsun" />
+						<img src="images/st/gpio_interrupt_config.png" class="large" />
+
+						<h3> SPI </h3>
+						<p> To be continued...	</p>
 					</section>
 
 
