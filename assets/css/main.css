@@ -2047,6 +2047,11 @@ input, select, textarea {
 			width: 25%;
 			height: 15%;
 		}
+
+		.frc {
+			width: 1%;
+			height: 1%;
+		}
 /* Image */
 	.image {
 		border-radius: 0.35em;
