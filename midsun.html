@@ -44,7 +44,7 @@
 						<p>Below is a brief outline of how I have layed out everything for telemetry</p>
 						<img src="images/midnightsun/telemetryarch.png" class="midsun large"/>
 						<p> The Raspberry Pi runs a Python script that I wrote to pick up CAN messages from the vehicle and GPS alongside it. This
-							then writes this data to a CSV file, sends it to MongoDB Atlas, the driver display flutter app, and FRED
+							then writes this data to a CSV file, sends it to DynamoDB, the driver display flutter app, and FRED
 							(Front End for Node Red). The data is sent to FRED using MQTT, which picks up the CAN messages
 							and stores them in InfluxDB for 2 days. Below I have an example of the format of the data which has already
 							been decoded from the CAN bus.
@@ -67,7 +67,7 @@
 							on the board for each peripheral. When the driver presses a button on the steering stalk, they can toggle the state of the lights, horn
 							, or radio. My module then detects this, raises an interrupt, and sends a CAN message to the power distribution to provide power
 							to the proper location in the vehicle. For the analog input (specifically the control stalk), the module uses an ADC to read voltages from the
-							control stalk and sends CAN messages based off of the voltages.
+							control stalk and sends CAN messages based off of the voltages. So for example, a voltage of 2078mV from the
 						</p>
 						<img src="images/midnightsun/control_stalk.jpg" class="midsun" />
 					</section>
