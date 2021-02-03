@@ -40,6 +40,27 @@
 						<header class="major">
 							<h2>My Work on Midnight Sun</h2>
 						</header>
+						<h3> CAN Explorer </h3>
+						<p>Currently, I am leading a project to develop software for our team to be able to visualize the data we get from our CAN Bus.
+							The architecture of this project is shown below
+						</p>
+						<img src="images/midnightsun/CANExplorer.png" class="midsun large"/>
+						<p> Our team needed a better way of being able to monitor how our vehicle was behaving and to be able to test our the different ECUs
+							in the car. Originally we thought about obtaining a license for tools such as CANalyzer but we ended up designing our own
+							CAN analyzing software since it would be able to meet the exact requirements we needed and would be helpful for testing. We are
+							using Django and React to create this web application. The backend, which is hosted by Django, is used to grab data and
+							process it using tools such as cantools and SocketCAN. The React front-end is currently being developed, but the idea is to
+							create a simple UI that can easily sort through and display the CAN data.
+						</p>
+						<h3> Driver Display </h3>
+						<p> This is the driver display. It is basically what the driver will use when they are in the vehicle to monitor their speed, battery, lights, and
+							check for any errors.
+						</p>
+						<img src="images/midnightsun/driverdisplay.png" class="midsun large"/>
+						<p> This driver display was created with Flutter (Dart). I worked mainly on connecting the driver-display to the CAN bus so that the data on the
+							driver display, such as speed, could be updated accordingly. I also developed the warning signals on the driver display so that
+							any faults that are picked up on the CAN bus would be shown to the driver.
+						</p>
 						<h3> Telemetry </h3>
 						<p>Below is a brief outline of how I have layed out everything for telemetry</p>
 						<img src="images/midnightsun/telemetryarch.png" class="midsun large"/>
