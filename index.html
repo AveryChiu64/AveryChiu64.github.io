@@ -1,326 +1,51 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Avery Chiu</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avery Chiu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Avery Chiu</h1>
+    
+    <ul>
+        <li><a href="https://symphoniclabs.com">Symphonic Labs</a> CTO and Co-Founder</a></li>
+        <li>Backed by AI Grant and South Park Commons.</li>
+        <li>Building wearable camera glasses for content creators.</li>
+        
+        <li>Some experiments I ran at Symphonic Labs:
+            <ul class="nested-list">
+                <li>
+                    <a href="https://x.com/crsamra/status/1833494380357013879">Lip reading AI for silent speech</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=nzYJXOpbddQ">Neural interface for silent speech</a>
+                </li>
+            </ul>
+        </li>
+        <li>Previously at:
+            <ul class="nested-list">
+                <li>SBX Robotics (YC W21)</li>
+                <li>Tesla</li>
+                <li>Ford</li>
+                <li>University of Waterloo Vision and Image Processing Lab</li>
+            </ul>
+        </li>
 
-		<!-- Header -->
-		<header id="header">
-			<div class="inner">
-				<a href="#" class="image avatar"><img src="images/Avery.png" alt="" /></a>
-				<h1><strong>Avery Chiu</strong> <br>
-					Mechatronics Engineering Student <br>
-					Artificial Intelligence Option <br>
-					University of Waterloo <br>
-					Former Display Engineering Intern at Tesla<br>
-					<h1>
-			</div>
-		</header>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>About Me</h2>
-						</header>
-						<p>I am a mechatronics engineering student at the University of Waterloo with a keen interest in machine learning, 
-							embedded systems, brain-computer interfaces, and software development.
-						</p>
-						<a href="AveryChiuResume.pdf" class="button">My Resume</a>
-					</section>
-
-					<section id="two">
-						<h2>Work Experience</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/sbx_robotics.jpg" class="image fit thumb"><img src="images/thumbs/sbx_robotics.jpg" alt="" /></a>
-								<h3>SBX Robotics</h3>
-								<p> SBX Robotics (YC W21) is a startup that creates synthetic data for training machine learning models. At my time there, I
-									implemented a cool image processing library called Albumentations into their post-proessing pipeline for their synthetically generated images.
-									This allowed for us to easily augment images with different transformations such as gaussian noise or downscaling, which helped
-									create more robust ML models for segmentation, keypoint detection, and 6D pose. I also integrated the Hugging Face stable diffusion API into 
-									our system to easily augment images, while keeping segmentation masks relatively in the same place by using depth2image and in-painting.
-								</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/Enlighted.jpg" class="image fit thumb"><img src="images/thumbs/Enlighted.jpg" alt="" /></a>
-								<h3>Enlighted</h3>
-								<p> At Enlighted (A subsidary of Siemens), I was a Algoriths/Machine Learning Engineering Intern. There I focused on the development
-									of the machine learning models and preprocessing pipeline optimization for Bluetooth localization. Enlighted has created a Bluetooth
-									tag for tracking objects in a building (think hospital or office).
-								</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/Tesla.png" class="image fit thumb"><img src="images/thumbs/Tesla.png" alt="" /></a>
-								<h3>Tesla</h3>
-								<p> I was a former Display Engineering Intern at Tesla. There, I worked on a developing software for a
-									3-axis robot to automatically test displays and ensure they function properly. This robot would automatically
-									run tests on our displays and verify that the display would respond properly. I also worked on reliability testing of 
-									the Bluetooth system for the car computers.
-								</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/viplogo.png" class="image fit thumb"><img src="images/thumbs/viplogo.png" alt="" /></a>
-								<h3>University of Waterloo Vision and Image Processing Lab</h3>
-								<p> As an undergraduate research assistant for the VIP lab, I developed python code with Detectron2 to be
-									used to detect northern leaf blight in maize. Most of my time was spent analyzing results and calculating AP/AR 
-									for all the ground truth and predicted images of corn.
-								</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/Ford.png" class="image fit thumb"><img src="images/thumbs/Ford.png" alt="" /></a>
-								<h3>Ford Motor Company</h3>
-								<p> I was a Firmware Development co-op at Ford. My role was to work on developing the bootloader and kernel
-									for the telematics control unit (TCU) and also Sync, Ford's infotainment system. These systems play an important
-									role in Ford vehicles.
-								</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/geotab.jpg" class="image fit thumb"><img src="images/thumbs/geotab.jpg" alt="" /></a>
-								<h3>Geotab</h3>
-								<p> I interned at Geotab as an Automotive R&D Intern. Here I worked on many different projects.
-									The above image shows a mini-car replica that I created to demonstrate Geotab's IOX-Keyless, which
-									would allow vehicles to be unlocked/locked using bluetooth or NFC.
-								</p>
-							</article>
-						</div>
-					</section>
-					
-					<section id="three">
-						<h2>Design Teams</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/watolink.png" class="image fit thumb"><img src="images/thumbs/watolink.png" alt="" /></a>
-								<h3>WATOLINK</h3>
-								<p> WATOLINK is a brain computer interface (BCI) team. I co-founded this team with my friend Chris Samra. 
-									We are currently competing in the NeuroTechX competition and designing an SSVEP speller to communicate 
-									to others, through a computer, using brain signals.
-								</p>
-									<ul class="actions">
-										<li><a href="https://watolink.ca/" class="button">WATOLINK Website</a></li>
-									</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/wato.jpg" class="image fit thumb"><img src="images/thumbs/wato.jpg" alt="" /></a>
-								<h3>WATonomous</h3>
-								<p> WATonomous is an autonomous car team, we participate in the SAE Autodrive Challenge which is a series of challenges
-									to test the functionality of our Level 4 autonomous car in an urban driving environment. My role consists of developing
-									the ROS interface to receive data from the CAN bus and also leading my team to develop the telemetry system.
-								</p>
-									<ul class="actions">
-										<li><a href="wato.html" class="button">My Work at WATonomous</a></li>
-									</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/solarcar.png" class="image fit thumb"><img src="images/thumbs/solarcar.png" alt="" /></a>
-								<h3>Midnight Sun Solar Car Team</h3>
-								<p> Midnight Sun is the University of Waterloo Solar Car Team, we participate in the American Solar Car Challenge.
-									My firmware projects on the Midnight Sun Solar Car Team include CAN Explorer, driver display,
-									telemetry, drivers for different MCUs, and the steering stalk.
-								</p>
-								<ul class="actions">
-									<li><a href="https://github.com/uw-midsun" class="icon brands fa-github">  Midnight Sun</a></li>
-								</ul>
-								<ul class="actions">
-									<li><a href="midsun.html" class="button">My Work at Midnight Sun</a></li>
-								</ul>
-							</article>
-
-						</div>
-					</section>
-
-					<section id="four">
-						<h2>Projects</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<iframe width="110%" height = "45%" src="https://www.youtube.com/embed/lS-gE3sTRTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								<h3>SSVEP Neural Interface for Communication</h3>
-								<p>At WATOLINK, we developed a neural interface for communication using the SSVEP paradigm that got us
-									first place at the NeuroTechX 2022 competition. We took advantage of OpenAI's GPT3 for sentence 
-									prediction and also allow the user to record their voice 
-									for the computer to replicate when they want to speak with the neural inteface. </p>
-									<ul class="actions">
-										<li><a href="https://github.com/WATOLINK/mind-speech-interface-ssvep" class="icon brands fa-github">  WATOLINK SSVEP</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="https://openbci.com/community/2022-neurotechx-student-club-competition-winners/#gsc.tab=0" class="button">Read More</a></li>
-									</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<iframe width="110%" height = "45%" src="https://www.youtube.com/embed/rknwRQNsvFg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								<h3>BB-8: Hack the North</h3>
-								<p>At Hack the North, my friends and I built BB-8 in under 36 hours. The judges loved it so much that they made us
-									finalists and Hack the North where we got to pitch our idea on stage for all the participants to see.
-									We built BB-8 controlled using eye-gaze using eye-tracking glasses from AdHawk Microsystems.  </p>
-									<ul class="actions">
-										<li><a href="https://github.com/cindyli-13/BB8" class="icon brands fa-github">  BB8</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="https://devpost.com/software/bb8-droid-pko3jb" class="button">Read More</a></li>
-									</ul>
-							</article>
-
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/cigbot.jpg" class="image fit thumb"><img src="images/thumbs/cigbot.jpg" alt="Cigbot" /></a>
-								<h3>Cigbot</h3>
-								<p>My friends and I won an award at MakeUofT21 for building Cigbot. We created a robot that would safely pick up
-									and dispose of cigarette butts on the ground. We used a Raspberry Pi, Arduino, and Pi Camera to detect cigarette butts,
-									drive towards them, and pick them up. </p>
-									<ul class="actions">
-										<li><a href="https://github.com/ChealsieBains01/CigaretteBot" class="icon brands fa-github">  Cigbot</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="https://devpost.com/software/cigbot" class="button">Read More</a></li>
-									</ul>
-							</article>
-
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/stm32.JPG" class="image fit thumb"><img src="images/thumbs/stm32.JPG" alt="STM32F103C8T6" /></a>
-								<h3>STM32F103C8T6 Drivers</h3>
-								<p>I wrote GPIO,I2C,SPI, and USART for an STM32F103C8T6. These drivers were mainly created for me to familiarize myself
-									with navigating datasheets and finding the right information from the right places (eg memory map, vector tables).</p>
-									<ul class="actions">
-										<li><a href="https://github.com/AveryChiu64/stm32f103c8_drivers" class="icon brands fa-github">  STM32 Drivers</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="stm32.html" class="button">Read More</a></li>
-									</ul>
-							</article>
-
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/sanitizer.jpg" class="image fit thumb"><img src="images/thumbs/sanitizer.jpg" alt="Hand Sanitizing Watch" /></a>
-								<h3>Hand Sanitizing Watch</h3>
-								<p>I attended the Hack the 6ix hackathon which was hosted online. My friends and I decided to have fun with this project
-									and I had the opportunity to play with an ESP32 which I had just purchased. For the project, I wrote code to allow
-									the ESP32 to interface with the MPU-6050 accelerometer/gyroscope with SPI and to control a servo motor according
-									to the values of the accelerometer.
-								</p>
-								<ul class="actions">
-									<li><a href="https://github.com/reubenkw/sanitizerWristBandApp" class="icon brands fa-github">  ESP32 Code and React App</a></li>
-								</ul>
-								<ul class="actions">
-									<li><a href="https://devpost.com/software/sanitizerwristbandapp" class="button">Read More</a></li>
-								</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/telematics.JPG" class="image fit thumb"><img src="images/thumbs/telematics.JPG" alt="Bike Telematics" /></a>
-								<h3>Bike Telematics Device</h3>
-								<p>We named this bike telematics device <b>Cyclus</b>. This was created for the MakeUofT Hackathon were we worked closely
-								with Telus and where we used their TELUS CAT M1 cellular shield as a GPS, accelerometer, and an SMS sender. The device
-								has the capability to be "locked". When locked it will detect when someone tries to steal the users bike and will help
-								provide constant GPS tracking to locate the bike. It will also warn the user with an SMS message.</p>
-								<ul class="actions">
-									<li><a href="https://github.com/AveryChiu64/Cyclus" class="icon brands fa-github">  Telematics device firmware</a></li>
-								</ul>
-								<ul class="actions">
-									<li><a href="https://devpost.com/software/cyclus-ublsn9" class="button">Read More</a></li>
-								</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<iframe width="110%" height = "45%" src="https://www.youtube.com/embed/yJ0mgIQQFDA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								<h3>FIRST Robotics Competition and Robot in 3 Days</h3>
-								<p> Above is a video of my robotics team (7721) competing in the FIRST Robotics Competition.
-									I participated in the FIRST Robotics Competition in highschool which was a competition to create a robot
-									that could perform certain tasks, such as launch balls, place panels, and climb. This robot is seen above. However
-									I also participated in Robot in 3 Days (Ri3d) which was an extension of FIRST Robotics but a 3-day sprint instead.
-								</p>
-								<ul class="actions">
-									<li><a href="https://github.com/uwreact" class="icon brands fa-github">  Firmware for FIRST</a></li>
-								</ul>
-								<ul class="actions">
-									<li><a href="frc.html" class="button">Read More</a></li>
-								</ul>
-
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/graphingrobot.jpg" class="image fit thumb"><img src="images/thumbs/graphingrobot.jpg" alt="Graphing Robot" /></a>
-								<h3>Graphing Robot</h3>
-								<p> A program that interprets a function and provides the information to a LEGO EV3 robot for it to draw the graph of that function.
-									This was created by 2 other mechatronics engineering students and I as a first year final project.
-									It features a combination of C++ and RobotC.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/AveryChiu64/GraphingRobot" class="icon brands fa-github">  Graphing Robot</a></li>
-									</ul>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/HollowShaftMotorDrive.png" class="image fit thumb"><img src="images/thumbs/HollowShaftMotorDrive.png" alt="Self Feeding Catheter" /></a>
-								<h3>Hollow Shaft Motor Drive</h3>
-								<p>I participated in the 2021 National Design League Online Designathon and worked with friends of mine to
-									develop housing for parts of a injection molding machine. We ended up creating plates to connect
-									the motor to the axle and bearings on the machine, which connected to the staten.
-									The plates can be seen in blue above and is made of 1045 steel. The motor is in red. </p>
-							</article>
-
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/catheter.png" class="image fit thumb"><img src="images/thumbs/catheter.png" alt="Self Feeding Catheter" /></a>
-								<h3>Self Feeding Catheter</h3>
-								<p>A group of 3 friend and I were given a challenge at the McMaster Designathon to create a
-									medical device that would assist doctors with inserting catheters into patients.</p>
-							</article>
-
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/thumbs/ferris.JPG" class="image fit thumb"><img src="images/thumbs/ferris.JPG" alt="Automated Ferris Wheel" /></a>
-								<h3>Automated Ferris Wheel</h3>
-								<p>This ferris wheel was created for the Ontario Skills Competition. It was interesting since this was my first time
-									having to program with Labview. My friend and I got a bronze medal in the Robotics
-									and Control Systems category for our efforts in this one day competition.</p>
-								<p>Users go through a door, where a sensor detects how many people pass. Once a certain number of people pass, the
-									ferris wheel starts spinning. There is an emergency stop button that will stop the whole system with one press
-									of a button.
-								</p>
-
-							</article>
-
-						</div>
-					</section>
-
-
-					<section id="five">
-						<h2>Get In Touch</h2>
-						<p>Please send me an email if you would like to contact me.</p>
-						<div class="row">
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:avery.chiu1&#64;uwaterloo.ca">avery.chiu1<i>@</i>uwaterloo.ca</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-			</div>
-
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/AveryChiu/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/AveryChiu64" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto:avery.chiu1&#64;uwaterloo.ca" onmouseover="this.href=this.href.replace('@@','.')" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; AveryChiu</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+        <li>Some projects from my time in Waterloo:
+            <ul class="nested-list">
+                <li><a href="https://www.youtube.com/watch?v=lS-gE3sTRTs">SSVEP Brain Computer Interface</a></li>
+                <li><a href="https://www.watonomous.ca/">CAN Interface for autonomous vehicles</a></li>
+                <li><a href="https://github.com/AveryChiu64/stm32f103c8_drivers">STM32 Microcontrollers Drivers</a></li>
+            </ul>
+        </li>
+        <li><a href="mailto:avery@symphoniclabs.com">avery@symphoniclabs.com</a></li>
+        <li>
+            <a href="https://twitter.com/avery_chiu">Twitter</a> / 
+            <a href="https://github.com/AveryChiu64">GitHub</a> / 
+            <a href="https://www.linkedin.com/in/averychiu/">LinkedIn</a>
+        </li>
+    </ul>
+</body>
+</html> 
